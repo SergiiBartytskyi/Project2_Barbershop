@@ -1,1 +1,1 @@
-# Project2_Barbershop
+# Project_Barbershop
