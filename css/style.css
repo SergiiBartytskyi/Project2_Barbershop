@@ -77,6 +77,20 @@ body {
 	color: var(--primary-text-color);
 }
 
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
 /* Header */
 
 .header {
@@ -138,6 +152,7 @@ body {
 }
 
 /* About section */
+
 .about__description {
 	color: var(--tertiary-text-color);
 }
@@ -149,16 +164,117 @@ body {
 	text-align: left;
 	color: var(--tertiary-text-color);
 }
+
 /* Prices section */
+
+.prices__pre-title {
+	color: rgba(157, 164, 189, 0.6);
+}
+
+.prices__title {
+	color: var(--secondary-text-color);
+}
 
 /* Benefits section */
 
+.benefits__item span {
+	font-size: 42px;
+	font-weight: 700;
+	line-height: 1.4;
+	letter-spacing: 0.05em;
+	text-align: center;
+	color: var(--primary-text-color);
+}
+
+.benefits__item sup {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.4;
+	letter-spacing: 0em;
+	text-align: center;
+	color: var(--accent-color);
+}
+
+.benefits__text {
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1.4;
+	letter-spacing: 0em;
+	text-align: center;
+	color: var(--primary-text-color);
+}
+
+.benefits__description {
+	color: var(--tertiary-text-color);
+}
 /* Barbers section */
 
+.barbers__title {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.4;
+	letter-spacing: 0.02em;
+	text-align: center;
+	color: var(--primary-text-color);
+}
+
+.barbers__text {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.4;
+	letter-spacing: 0.02em;
+	text-align: center;
+	color: var(--accent-color);
+}
 /* Gallery section */
 
 /* Booking section */
 
+.booking__title {
+	color: var(--secondary-text-color);
+}
+
 /* Contacts section */
 
+.contacts__title {
+	color: var(--secondary-text-color);
+}
+
+.contacts__address {
+	font-style: normal;
+}
+
+/* .contacts__list:child(1) {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.7;
+	letter-spacing: 0.02em;
+	text-align: left;
+	color: var(--description-color);
+} */
+
+.contacts__link {
+	font-size: 18px;
+	line-height: 1.7;
+	letter-spacing: 0.02em;
+	text-align: left;
+	color: var(--description-color);
+}
+.contacts__item:first-child {
+	font-weight: 700;
+}
+
+.contacts__pre-title {
+	color: var(--secondary-text-color);
+}
+
 /* Footer */
+
+.footer__copy {
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 1.4;
+	letter-spacing: 0.2em;
+	text-align: left;
+	color: var(--description-color);
+}
