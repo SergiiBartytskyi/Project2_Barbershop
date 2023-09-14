@@ -125,12 +125,12 @@ img {
 	font-family: inherit;
 	font-size: 12px;
 	font-weight: 600;
-	line-height: 1.3;
+	line-height: 1.33;
 	letter-spacing: 0.09em;
 	text-transform: uppercase;
-	background-color: transparent;
 	border-radius: 25px;
 	border: 1px solid var(--accent-color);
+	background-color: transparent;
 	cursor: pointer;
 }
 
@@ -154,6 +154,28 @@ img {
 	padding: 32px 0;
 	background-color: grey;
 }
+
+.header .container{
+	display: flex;
+	align-items: center;
+}
+
+.header__nav{
+	margin-left: 130px;
+}
+
+.header__list{
+	display: flex;
+}
+
+.header__item + .header__item{
+	margin-left: 30px;
+}
+
+.header__wrap{
+	margin-left: auto;
+}
+
 .header__link,
 .header__tel {
 	font-size: 12px;
@@ -172,7 +194,19 @@ img {
 	color: var(--accent-color);
 }
 
+.header__btn{
+	margin-left: 43px;
+}
+
 /* Hero section */
+
+.hero .container{
+	display: flex;
+}
+
+.hero__socials{
+	width: 100px;
+}
 
 .socials__link {
 	font-size: 11px;
@@ -189,7 +223,10 @@ img {
 
 .hero__content {
 	padding: 272px 100px 206px;
-}
+	flex-grow: 1;
+	background-color: #c4c0c0;
+	}
+
 .hero__pre-title {
 	margin-bottom: 20px;
 	color: var(--quaternary-text-color);
@@ -209,6 +246,10 @@ img {
 }
 
 /* About section */
+
+.about__list {
+	display: flex;
+}
 
 .about__pre-title {
 	margin-bottom: 20px;
@@ -339,8 +380,7 @@ img {
 	color: var(--accent-color);
 }
 
-.barbers__socials {
-}
+
 /* Gallery section */
 
 .gallery__pre-title {
