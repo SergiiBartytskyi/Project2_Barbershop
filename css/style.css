@@ -206,11 +206,11 @@ img {
 	display: flex;
 }
 
-.hero__socials {
+.hero__soc {
 	width: 100px;
 }
 
-.socials__link {
+.soc__link {
 	font-size: 11px;
 	font-weight: 600;
 	line-height: 1.4;
@@ -218,15 +218,16 @@ img {
 	color: var(--secondary-text-color);
 }
 
-.socials__link:hover,
-.socials__link:focus {
+.soc__link:hover,
+.soc__link:focus {
 	color: var(--accent-color);
 }
 
 .hero__content {
 	padding: 272px 100px 206px;
 	flex-grow: 1;
-	background-color: #c4c0c0;
+	background-color: var(--secondary-text-color);
+	background-image: linear-gradient(rgba(25, 28, 38, 0.20), rgba(25, 28, 38, 0.20)), url(../images/hero-bg-img.jpg);
 }
 
 .hero__pre-title {
@@ -286,6 +287,16 @@ img {
 }
 
 /* Prices section */
+
+.prices {
+	max-width: 1600px;
+	margin: 0 auto;
+	background-color: #111319;
+	background-image: url(../images/prices-bg-img.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
 
 .prices__pre-title {
 	margin-bottom: 20px;
@@ -405,7 +416,7 @@ img {
 	text-align: center;
 }
 
-.barber__title {
+.barbers__avatar {
 	margin-bottom: 8px;
 	font-size: 18px;
 	font-weight: 400;
@@ -423,67 +434,90 @@ img {
 	color: var(--accent-color);
 }
 
-
-/* Gallery section */
-
-.gallery__pre-title {
-	margin-bottom: 44px;
-}
-
-.gallery__list {
+.barbers__socials {
 	display: flex;
-	gap: 30px;
+	justify-content: center;
+	gap: 10px;
 }
 
-/* Booking section */
-
-.booking__title {
-	color: var(--tertiary-text-color);
+.socials__link {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background-color: var(--primary-background-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-/* Contacts section */
-
-.contacts__title {
-	margin-bottom: 40px;
-	color: var(--tertiary-text-color);
+.socials__icon {
+	fill: var(--secondary-text-color);
 }
 
-.contacts__address {
-	margin-bottom: 70px;
-}
+.socials__link:hover .socials__icon,
+.socials__link:focus .socials__icon {
+	fill: #FF6C00;
 
-.contacts__link {
-	font-size: 18px;
-	line-height: 1.7;
-	letter-spacing: 0.02em;
-	text-align: left;
-	color: var(--description-color);
-}
+	/* Gallery section */
 
-.contacts__item:not(:last-child) {
-	margin-bottom: 20px;
-}
+	.gallery__pre-title {
+		margin-bottom: 44px;
+	}
 
-.contacts__item:first-child {
-	font-weight: 700;
-}
+	.gallery__list {
+		display: flex;
+		gap: 30px;
+	}
 
-.contacts__pre-title {
-	margin-bottom: 20px;
-	color: var(--tertiary-text-color);
-}
+	/* Booking section */
 
-/* Footer */
+	.booking__title {
+		color: var(--tertiary-text-color);
+	}
 
-.footer {
-	padding-top: 56px;
-	padding-bottom: 56px;
-}
+	/* Contacts section */
 
-.footer__copy {
-	font-size: 11px;
-	font-weight: 600;
-	line-height: 1.4;
-	letter-spacing: 0.2em;
-	color: var(--description-color);
-}
+	.contacts__title {
+		margin-bottom: 40px;
+		color: var(--tertiary-text-color);
+	}
+
+	.contacts__address {
+		margin-bottom: 70px;
+	}
+
+	.contacts__link {
+		font-size: 18px;
+		line-height: 1.7;
+		letter-spacing: 0.02em;
+		text-align: left;
+		color: var(--description-color);
+	}
+
+	.contacts__item:not(:last-child) {
+		margin-bottom: 20px;
+	}
+
+	.contacts__item:first-child {
+		font-weight: 700;
+	}
+
+	.contacts__pre-title {
+		margin-bottom: 20px;
+		color: var(--tertiary-text-color);
+	}
+
+	/* Footer */
+
+	.footer {
+		padding-top: 56px;
+		padding-bottom: 56px;
+	}
+
+	.footer__copy {
+		font-size: 11px;
+		font-weight: 600;
+		line-height: 1.4;
+		letter-spacing: 0.2em;
+		color: var(--description-color);
+	}
