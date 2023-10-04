@@ -28,15 +28,15 @@
 				</a>
 				<nav class="header__nav">
 					<ul class="header__list list">
-						<li class="header__item"><a class="header__link link current" href="">About</a></li>
-						<li class="header__item"><a class="header__link link" href="">Services and prices</a></li>
-						<li class="header__item"><a class="header__link link" href="">Barbers</a></li>
-						<li class="header__item"><a class="header__link link" href="">Contacts</a></li>
+						<li class="header__item"><a class="header__link link current" href="/">About</a></li>
+						<li class="header__item"><a class="header__link link" href="/">Services and prices</a></li>
+						<li class="header__item"><a class="header__link link" href="/">Barbers</a></li>
+						<li class="header__item"><a class="header__link link" href="/">Contacts</a></li>
 					</ul>
 				</nav>
 				<div class="header__wrap">
 					<a class="header__tel link" href="tel:+380441111111">+38 044 111 11 11</a>
-					<button class="header__btn btn btn__primary" type="button">Online-booking</button>
+					<button class="header__btn btn" type="button" data-modal-open>Online-booking</button>
 				</div>
 			</div>
 		</header>
@@ -46,14 +46,16 @@
 			<!-- Hero section -->
 			<section class="hero no-padding">
 				<div class="container">
-					<ul class="hero__soc soc__list list">
-						<li class="soc__item">
-							<a class="soc__link link" href="" target="_blank" rel="noopener noreferrer nofollow">Instagram</a>
-						</li>
-						<li class="soc__item">
-							<a class="soc__link link" href="" target="_blank" rel="noopener noreferrer nofollow">Youtube</a>
-						</li>
-					</ul>
+					<div class="hero__wrapper">
+						<ul class="hero__soc soc__list list">
+							<li class="soc__item">
+								<a class="soc__link link" href="/" target="_blank" rel="noopener noreferrer nofollow">Instagram</a>
+							</li>
+							<li class="soc__item">
+								<a class="soc__link link" href="/" target="_blank" rel="noopener noreferrer nofollow">Youtube</a>
+							</li>
+						</ul>
+					</div>
 
 					<div class="hero__content">
 						<p class="hero__pre-title pre-title">A hair salon for men in Kyiv</p>
@@ -88,7 +90,7 @@
 							into the hands of our master, you will never be the same again. We are a team that is always "on the same
 							wave" with clients. Therefore, we are always ready to improve everyone who comes to us!
 						</p>
-						<button class="btn btn__secondary" type="button">Online-booking</button>
+						<button class="btn btn__about" type="button" data-modal-open>Online-booking</button>
 					</div>
 				</div>
 			</section>
@@ -136,7 +138,7 @@
 							</li>
 						</ul>
 					</div>
-					<button class="btn btn__primary prices__button" type="button">Online-booking</button>
+					<button class="btn prices__button" type="button" data-modal-open>Online-booking</button>
 				</div>
 			</section>
 
@@ -186,19 +188,19 @@
 								<p class="barbers__text">Extreme Barber</p>
 								<ul class="barbers__socials list">
 									<li class="socials__item"
-										><a class="socials__link link" href="" aria-label="Instagram">
+										><a class="socials__link link" href="/" aria-label="Instagram">
 											<svg class="socials__icon" width="20" height="20">
 												<use href="./images/icons.svg#icon-instagram"></use>
 											</svg>
 										</a>
 									</li>
 									<li class="socials__item"
-										><a class="socials__link link" href="" aria-label="Twitter">
+										><a class="socials__link link" href="/" aria-label="Twitter">
 											<svg class="socials__icon" width="20" height="20">
 												<use href="./images/icons.svg#icon-twitter"></use></svg></a
 									></li>
 									<li class="socials__item"
-										><a class="socials__link link" href="" aria-label="Facebook">
+										><a class="socials__link link" href="/" aria-label="Facebook">
 											<svg class="socials__icon" width="20" height="20">
 												<use href="./images/icons.svg#icon-facebook"></use></svg></a
 									></li>
@@ -217,24 +219,24 @@
 								<p class="barbers__text">Extreme Barber</p>
 								<ul class="barbers__socials list">
 									<li class="socials__item"
-										><a class="socials__link link" href="" aria-label="Instagram">
+										><a class="socials__link link" href="/" aria-label="Instagram">
 											<svg class="socials__icon" width="20" height="20">
 												<use href="./images/icons.svg#icon-instagram"></use>
 											</svg>
 										</a>
 									</li>
 									<li class="socials__item"
-										><a class="socials__link link" href="" aria-label="Twitter">
+										><a class="socials__link link" href="/" aria-label="Twitter">
 											<svg class="socials__icon" width="20" height="20">
 												<use href="./images/icons.svg#icon-twitter"></use></svg></a
 									></li>
 									<li class="socials__item"
-										><a class="socials__link link" href="" aria-label="Facebook">
+										><a class="socials__link link" href="/" aria-label="Facebook">
 											<svg class="socials__icon" width="20" height="20">
 												<use href="./images/icons.svg#icon-facebook"></use></svg></a
 									></li>
 									<li class="socials__item"
-										><a class="socials__link link" href="" aria-label="LinkedIn">
+										><a class="socials__link link" href="/" aria-label="LinkedIn">
 											<svg class="socials__icon" width="20" height="20">
 												<use href="./images/icons.svg#icon-linkedin"></use></svg></a
 									></li>
@@ -248,24 +250,24 @@
 								<p class="barbers__text">Extreme Barber</p>
 								<ul class="barbers__socials list">
 									<li class="socials__item"
-										><a class="socials__link link" href="" aria-label="Instagram">
+										><a class="socials__link link" href="/" aria-label="Instagram">
 											<svg class="socials__icon" width="20" height="20">
 												<use href="./images/icons.svg#icon-instagram"></use>
 											</svg>
 										</a>
 									</li>
 									<li class="socials__item"
-										><a class="socials__link link" href="" aria-label="Twitter">
+										><a class="socials__link link" href="/" aria-label="Twitter">
 											<svg class="socials__icon" width="20" height="20">
 												<use href="./images/icons.svg#icon-twitter"></use></svg></a
 									></li>
 									<li class="socials__item"
-										><a class="socials__link link" href="" aria-label="Facebook">
+										><a class="socials__link link" href="/" aria-label="Facebook">
 											<svg class="socials__icon" width="20" height="20">
 												<use href="./images/icons.svg#icon-facebook"></use></svg></a
 									></li>
 									<li class="socials__item"
-										><a class="socials__link link" href="" aria-label="LinkedIn">
+										><a class="socials__link link" href="/" aria-label="LinkedIn">
 											<svg class="socials__icon" width="20" height="20">
 												<use href="./images/icons.svg#icon-linkedin"></use></svg></a
 									></li>
@@ -348,13 +350,19 @@
 
 				<ul class="footer__soc soc__list list">
 					<li class="soc__item">
-						<a class="soc__link link" href="" target="_blank" rel="noopener noreferrer nofollow">Instagram</a>
+						<a class="soc__link link" href="/" target="_blank" rel="noopener noreferrer nofollow">Instagram</a>
 					</li>
 					<li class="soc__item">
-						<a class="soc__link link" href="" target="_blank" rel="noopener noreferrer nofollow">Youtube</a>
+						<a class="soc__link link" href="/" target="_blank" rel="noopener noreferrer nofollow">Youtube</a>
 					</li>
 				</ul>
 			</div>
 		</footer>
+		<div class="backdrop is-hidden" data-modal>
+			<div class="modal">
+				<button type="button" class="modal-close" data-modal-close>X</button>
+			</div>
+		</div>
+		<script src="./js/modal.js"></script>
 	</body>
 </html>
