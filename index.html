@@ -90,7 +90,7 @@
 							into the hands of our master, you will never be the same again. We are a team that is always "on the same
 							wave" with clients. Therefore, we are always ready to improve everyone who comes to us!
 						</p>
-						<button class="btn btn__about" type="button" data-modal-open>Online-booking</button>
+						<button class="btn btn__secondary" type="button" data-modal-open>Online-booking</button>
 					</div>
 				</div>
 			</section>
@@ -297,7 +297,43 @@
 				<div class="container">
 					<section class="booking section">
 						<h2 class="booking__title title">Online-booking</h2>
-						<!-- ToDo form -->
+						<form class="form__field">
+							<div class="form__wrap">
+								<input
+									type="text"
+									id="user-name"
+									class="form__input form__item"
+									name="user-name"
+									placeholder=" "
+									required
+								/>
+								<label for="user-name" class="form__label">Name*</label>
+							</div>
+
+							<div class="form__wrap">
+								<input
+									type="tel"
+									id="user-tel"
+									class="form__input form__item"
+									name="user-tel"
+									placeholder=" "
+									required
+								/>
+								<label for="user-tel" class="form__label">Phone*</label>
+							</div>
+
+							<div class="form__wrap">
+								<textarea
+									name="user-comment"
+									id="user-comment"
+									class="form__textarea form__item"
+									placeholder=" "
+								></textarea>
+								<label for="user-comment" class="form__label">Message</label>
+							</div>
+
+							<button type="submit" class="btn contact-btn">Send</button>
+						</form>
 					</section>
 
 					<section class="contacts section">
@@ -361,6 +397,48 @@
 		<div class="backdrop is-hidden" data-modal>
 			<div class="modal">
 				<button type="button" class="modal-close" data-modal-close>X</button>
+				<p class="modal__title">Registration</p>
+				<form class="modal__form">
+					<div class="modal__field">
+						<label class="modal__label">Name*</label>
+						<div class="modal__wrap">
+							<input type="text" class="input modal__input" name="user-name" placeholder="Your name" required />
+							<svg class="modal__icon" width="18" height="18">
+								<use href="./images/icons.svg#icon-name-icon"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="modal__field">
+						<label class="modal__label">Email*</label>
+						<div class="modal__wrap">
+							<input type="email" class="input modal__input" name="user-email" placeholder="Your email" required />
+							<svg class="modal__icon" width="18" height="18">
+								<use href="./images/icons.svg#icon-email-icon"></use>
+							</svg>
+						</div>
+					</div>
+					<div class="modal__field">
+						<label class="modal__label">Pnone number*</label>
+						<div class="modal__wrap">
+							<input type="tel" class="input modal__input" name="user-tel" placeholder="Your phone number" required />
+							<svg class="modal__icon" width="18" height="18">
+								<use href="./images/icons.svg#icon-phone-icon"></use>
+							</svg>
+						</div>
+					</div>
+
+					<div class="modal__field">
+						<label for="user-comment" class="modal__label">Comment</label>
+						<textarea
+							name="user-comment"
+							id="user-comment"
+							class="input modal__comment"
+							placeholder="Your comment"
+						></textarea>
+					</div>
+
+					<button type="submit" class="btn btn__secondary modal__btn">Send</button>
+				</form>
 			</div>
 		</div>
 		<script src="./js/modal.js"></script>
