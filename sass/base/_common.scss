@@ -1,0 +1,27 @@
+/* Body */
+body {
+	font-family: "Open Sans", sans-serif;
+	color: $primary-text-color;
+}
+
+section {
+	padding-top: 130px;
+	padding-bottom: 130px;
+}
+
+address {
+	font-style: normal;
+}
+
+.list {
+	list-style: none;
+}
+
+.link {
+	text-decoration: none;
+	color: currentColor;
+}
+
+.no-padding {
+	padding: 0;
+}

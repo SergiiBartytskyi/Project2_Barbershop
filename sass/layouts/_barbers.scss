@@ -1,0 +1,63 @@
+.barbers {
+	background-color: $secondary-background-color;
+
+	&__pre-title {
+		margin-bottom: 20px;
+	}
+
+	&__title {
+		margin-bottom: 44px;
+	}
+
+	&__list {
+		display: flex;
+		gap: 30px;
+	}
+
+	&__item {
+		flex-basis: calc((100% - 60px) / 3);
+	}
+
+	&__wrap {
+		padding: 30px 5px 0;
+		text-align: center;
+	}
+
+	&__avatar {
+		margin-bottom: 8px;
+		@include font(18px, $lh: 1.4);
+		color: $secondary-text-color;
+	}
+
+	&__text {
+		margin-bottom: 30px;
+		@include font(14px, $lh: 1.4);
+		color: $accent-color;
+	}
+}
+
+.soc_list {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.soc_link {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background-color: $primary-background-color;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.soc_icon {
+	fill: $secondary-text-color;
+	transition: fill 300ms linear;
+
+	.soc_link:hover &,
+	.soc_link:focus & {
+		fill: #ff6c00;
+	}
+}

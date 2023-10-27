@@ -1,0 +1,31 @@
+/* Button type */
+
+.btn {
+	min-width: 160px;
+	height: 40px;
+	font-family: inherit;
+	@include font(12px, 600, 1.33, 0.09em);
+	text-transform: uppercase;
+	border-radius: 25px;
+	border: 1px solid $accent-color;
+	color: $tertiary-text-color;
+	background-color: transparent;
+	cursor: pointer;
+	transition: color 300ms linear, background-color 300ms linear;
+	outline: none;
+
+	&:hover,
+	&:focus {
+		background-color: $accent-color;
+	}
+
+	&__secondary {
+		color: $secondary-text-color;
+	}
+
+	&__secondary:hover,
+	&__secondary:focus {
+		color: $tertiary-text-color;
+		background-color: $accent-color;
+	}
+}

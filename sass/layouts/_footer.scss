@@ -1,0 +1,22 @@
+.footer {
+	padding-top: 56px;
+	padding-bottom: 56px;
+
+	& .container {
+		display: flex;
+		align-items: center;
+	}
+
+	&__copy {
+		@include font(11px, 600);
+		color: $description-color;
+	}
+
+	&__list {
+		margin-left: auto;
+	}
+
+	&__item {
+		display: flex;
+	}
+}

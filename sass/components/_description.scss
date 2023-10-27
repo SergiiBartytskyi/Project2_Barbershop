@@ -1,0 +1,4 @@
+.description {
+	@include font(18px, null, 1.67, 0.02em);
+	color: $description-color;
+}

@@ -1,0 +1,40 @@
+.header {
+	position: absolute;
+	width: 100%;
+	padding: 32px 0;
+
+	& .container {
+		display: flex;
+		align-items: center;
+	}
+
+	&__nav {
+		margin-left: 130px;
+	}
+	&__list {
+		display: flex;
+	}
+
+	&__item + &__item {
+		margin-left: 30px;
+	}
+	&__wrap {
+		margin-left: auto;
+	}
+
+	&__link,
+	&__tel {
+		@include font(12px, 600, $ls: 0.1em);
+		color: $tertiary-text-color;
+		transition: color 300ms linear;
+
+		&:hover,
+		&:focus {
+			color: $accent-color;
+		}
+	}
+
+	&__btn {
+		margin-left: 43px;
+	}
+}

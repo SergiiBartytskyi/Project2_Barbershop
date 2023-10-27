@@ -1,0 +1,39 @@
+.hero .container {
+	display: flex;
+}
+
+.hero__wrapper {
+	width: 100px;
+	display: flex;
+	align-items: flex-end;
+	padding-left: 27px;
+	padding-bottom: 40px;
+}
+
+.hero__list {
+	transform: rotate(-90deg) translateY(100%);
+	transform-origin: bottom left;
+}
+
+.hero__content {
+	padding: 272px 100px 206px;
+	flex-grow: 1;
+	background-color: $secondary-text-color;
+	background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero-bg-img.jpg);
+}
+
+.hero__pre-title {
+	margin-bottom: 20px;
+	color: $quaternary-text-color;
+}
+
+.hero__title {
+	margin-bottom: 20px;
+	font-family: "Raleway", sans-serif;
+	@include font(72px, 700, $ls: 0.05em);
+	color: $tertiary-text-color;
+}
+
+.hero__description {
+	max-width: 360px;
+}

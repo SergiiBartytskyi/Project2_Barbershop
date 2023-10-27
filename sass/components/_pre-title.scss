@@ -1,0 +1,8 @@
+.pre-title {
+	@include font(11px, 600, $ls: 0.1em);
+	text-transform: uppercase;
+	color: $secondary-text-color;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}

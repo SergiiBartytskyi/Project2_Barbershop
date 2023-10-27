@@ -1,0 +1,78 @@
+.benefits {
+	padding-top: 121px;
+
+	& .container {
+		display: flex;
+	}
+
+	&__cards {
+		width: calc(50% - 15px);
+		display: flex;
+		justify-content: center;
+		margin-right: 30px;
+	}
+
+	&__list {
+		display: flex;
+		width: 370px;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		width: 170px;
+		height: 133px;
+		padding: 20px 24px;
+		background-color: $secondary-background-color;
+
+		&:nth-child(even) {
+			margin-top: 30px;
+		}
+
+		&:nth-child(odd) {
+			margin-right: 30px;
+		}
+	}
+
+	&__wrap {
+		display: flex;
+		justify-content: center;
+
+		span {
+			@include font(42px, 700, $ls: 0.05em);
+			text-align: center;
+			color: $secondary-text-color;
+			display: inline-block;
+			margin-bottom: 6px;
+		}
+
+		sup {
+			@include font($fw: 600, $ls: 0em);
+			text-align: center;
+			color: $accent-color;
+			margin-top: 15px;
+		}
+	}
+
+	&__content {
+		max-width: 500px;
+		padding-top: 9px;
+	}
+
+	&__pre-title {
+		margin-bottom: 20px;
+	}
+
+	&__title {
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		@include font(11px, 600, $ls: 0em);
+		text-align: center;
+		color: $secondary-text-color;
+	}
+
+	&__description {
+		color: $primary-text-color;
+	}
+}

@@ -1,0 +1,16 @@
+.socials {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+
+	&__link {
+		@include font(11px, 600);
+		color: $secondary-text-color;
+		transition: color 300ms linear;
+
+		&:hover,
+		&:focus {
+			color: $accent-color;
+		}
+	}
+}

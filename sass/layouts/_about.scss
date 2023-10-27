@@ -1,0 +1,32 @@
+.about .container {
+	display: flex;
+	column-gap: 30px;
+}
+
+.about__list {
+	display: flex;
+	column-gap: 30px;
+}
+
+.about__content {
+	max-width: 470px;
+}
+
+.about__pre-title {
+	margin-bottom: 20px;
+}
+
+.about__title {
+	margin-bottom: 20px;
+}
+
+.about__description {
+	margin-bottom: 20px;
+	color: $primary-text-color;
+}
+
+.about__text {
+	margin-bottom: 40px;
+	@include font(14px, null, 1.86);
+	color: $primary-text-color;
+}
