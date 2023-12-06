@@ -1,5 +1,9 @@
 .title {
 	font-family: "Raleway", sans-serif;
-	@include font(42px, 700, 1.17, 0.05em);
+	@include font(40px, 700, 1.17, 0.05em);
 	color: $secondary-text-color;
+
+	@include mobile {
+		@include font(42px, 700, 1.17, 0.05em);
+	}
 }

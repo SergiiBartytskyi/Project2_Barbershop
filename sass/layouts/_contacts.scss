@@ -1,37 +1,81 @@
 .contacts {
 	margin: 0 auto;
+	max-width: 1600px;
 	background-color: #191c26;
-	background-image: url(../images/contacts-bg-img.png);
-	background-repeat: no-repeat;
-	background-position: right;
-	background-size: calc(50% - 15px) 100%;
+	@include desktop {
+		background-repeat: no-repeat;
+		background-position: right;
+		background-size: calc(50% - 15px) 100%;
+		background-image: $bg-gradient, url(../images/background/contacts/bg_cont_d.png);
+		@include retina_2x {
+			background-image: $bg-gradient, url(../images/background/contacts/bg_cont_d@2x.png);
+		}
+		@include retina_3x {
+			background-image: $bg-gradient, url(../images/background/contacts/bg_cont_d@3x.png);
+		}
+	}
 
 	& .container {
 		display: flex;
+		flex-direction: column;
+		padding: 0;
+
+		@include desktop {
+			flex-direction: row;
+			padding: 0 15px;
+		}
 	}
-	&__booking {
-		margin-right: 30px;
+
+	@include desktop {
+		&__booking {
+			margin-right: 30px;
+		}
 	}
 }
 
 .booking {
-	padding-bottom: 183px;
-	width: calc(50% - 15px);
+	padding-left: 30px;
+	padding-right: 30px;
 
+	@include tablet {
+		padding-left: 39px;
+		padding-right: 39px;
+	}
+
+	@include desktop {
+		padding: 130px 0 174px;
+		width: calc(50% - 15px);
+	}
+
+	@include desktop {
+	}
 	&__title {
 		color: $tertiary-text-color;
 		margin-bottom: 44px;
+		text-align: center;
+		@include tablet {
+			text-align: left;
+		}
 	}
 }
 
 .form {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
+
+	@include tablet {
+		justify-content: space-between;
+	}
 
 	&__wrap {
 		position: relative;
 		margin-bottom: 44px;
+		width: 100%;
+
+		@include tablet {
+			width: calc(50% - 15px);
+		}
 
 		&:last-of-type {
 			width: 100%;
@@ -51,8 +95,16 @@
 	}
 
 	&__input {
-		width: 270px;
+		width: 100%;
 		height: 24px;
+
+		@include tablet {
+			width: 330px;
+		}
+
+		@include desktop {
+			width: 270px;
+		}
 	}
 
 	&__label {
@@ -79,18 +131,64 @@
 }
 
 .contact {
-	padding-bottom: 120px;
-	width: calc(50% - 15px);
-	padding-left: 100px;
+	padding-left: 30px;
+	padding-right: 30px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: $bg-gradient, url(../images/background/contacts/bg_cont_m.png);
+	@include retina_2x {
+		background-image: $bg-gradient, url(../images/background/contacts/bg_cont_m@2x.png);
+	}
+	@include retina_3x {
+		background-image: $bg-gradient, url(../images/background/contacts/bg_cont_m@3x.png);
+	}
+
+	@include tablet {
+		padding-left: 39px;
+		padding-right: 39px;
+		background-image: $bg-gradient, url(../images/background/contacts/bg_cont_t.png);
+		@include retina_2x {
+			background-image: $bg-gradient, url(../images/background/contacts/bg_cont_t@2x.png);
+		}
+		@include retina_3x {
+			background-image: $bg-gradient, url(../images/background/contacts/bg_cont_t@3x.png);
+		}
+	}
+
+	@include desktop {
+		background-image: none;
+		padding: 130px 100px 111px;
+		width: calc(50% - 15px);
+	}
 
 	&__title {
 		margin-bottom: 40px;
+		text-align: center;
 		color: $tertiary-text-color;
+
+		@include tablet {
+			text-align-last: left;
+		}
+	}
+
+	&__wrap {
+		@media screen and (min-width: 768px) and (max-width: 1199.5px) {
+			display: flex;
+			gap: 30px;
+		}
 	}
 
 	&__address {
-		margin-bottom: 70px;
-		width: 270px;
+		margin-bottom: 44px;
+
+		@include tablet {
+			margin-bottom: 0;
+		}
+
+		@include desktop {
+			margin-bottom: 70px;
+		}
 	}
 
 	&__pre-title {
@@ -103,8 +201,26 @@
 	}
 }
 .address {
+	width: 100%;
+
+	@include tablet {
+		width: calc(50% - 15px);
+	}
+
+	@include desktop {
+		width: 100%;
+	}
+
+	&__list {
+		@include tablet {
+			width: 270px;
+		}
+	}
+
 	&__item {
-		width: 230px;
+		@include tablet {
+			width: 230px;
+		}
 
 		&:first-child {
 			font-weight: 700;
@@ -126,5 +242,12 @@
 		fill: currentColor;
 		margin-right: 16px;
 		flex-shrink: 0;
+		stroke: #9da4bd;
+		transition: stroke 300ms linear;
+
+		.address__link:hover > &,
+		.address__link:focus > & {
+			stroke: $accent-color;
+		}
 	}
 }

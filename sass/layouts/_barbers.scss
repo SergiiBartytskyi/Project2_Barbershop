@@ -1,6 +1,13 @@
 .barbers {
 	background-color: $secondary-background-color;
 
+	@media screen and (min-width: 768px) and (max-width: 1199.5px) {
+		& .container {
+			padding-right: 159px;
+			padding-left: 159px;
+		}
+	}
+
 	&__pre-title {
 		margin-bottom: 20px;
 	}
@@ -11,11 +18,25 @@
 
 	&__list {
 		display: flex;
-		gap: 30px;
+		flex-direction: column;
+		gap: 64px;
+
+		@include desktop {
+			flex-direction: row;
+			gap: 30px;
+		}
 	}
 
 	&__item {
-		flex-basis: calc((100% - 60px) / 3);
+		width: 100%;
+
+		@include tablet {
+			width: 450px;
+		}
+
+		@include desktop {
+			flex-basis: calc((100% - 60px) / 3);
+		}
 	}
 
 	&__wrap {
@@ -58,6 +79,6 @@
 
 	.soc_link:hover &,
 	.soc_link:focus & {
-		fill: #ff6c00;
+		fill: $accent-color;
 	}
 }

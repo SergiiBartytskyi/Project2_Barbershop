@@ -1,13 +1,40 @@
+.no-padding {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
 .hero .container {
-	display: flex;
+	padding: 0;
+	width: 100%;
+
+	@include tablet {
+		display: flex;
+		gap: 30px;
+		padding-left: 39px;
+		padding-right: 39px;
+	}
+
+	@include desktop {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 
 .hero__wrapper {
-	width: 100px;
-	display: flex;
-	align-items: flex-end;
-	padding-left: 27px;
-	padding-bottom: 40px;
+	display: none;
+
+	@include tablet {
+		display: flex;
+		align-items: flex-end;
+		width: 87px;
+		padding-left: 36px;
+		padding-bottom: 40px;
+	}
+
+	@include desktop {
+		width: 70px;
+		padding-left: 26px;
+	}
 }
 
 .hero__list {
@@ -16,24 +43,75 @@
 }
 
 .hero__content {
-	padding: 272px 100px 206px;
-	flex-grow: 1;
+	max-width: 1070px;
+	min-height: 580px;
+	padding: 210px 30px;
 	background-color: $secondary-text-color;
-	background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)), url(../images/hero-bg-img.jpg);
-}
+	background-image: $bg-gradient, url(../images/background/hero/mobile/slid_img_3_m.jpg);
+	background-image: $bg-gradient, url(../images/background/hero/mobile/slid_img_3_m.webp);
+	@include retina_2x {
+		background-image: $bg-gradient, url(../images/background/hero/mobile/slid_img_3_m@2x.jpg);
+		background-image: $bg-gradient, url(../images/background/hero/mobile/slid_img_3_m@2x.webp);
+	}
+	@include retina_3x {
+		background-image: $bg-gradient, url(../images/background/hero/mobile/slid_img_3_m@3x.jpg);
+		background-image: $bg-gradient, url(../images/background/hero/mobile/slid_img_3_m@3x.webp);
+	}
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	@include tablet {
+		padding: 272px 114px 237px 98px;
+		flex-grow: 1;
+		background-image: $bg-gradient, url(../images/background/hero/tablet/slid_img_3_t.jpg);
+		background-image: $bg-gradient, url(../images/background/hero/tablet/slid_img_3_t.webp);
+		@include retina_2x {
+			background-image: $bg-gradient, url(../images/background/hero/tablet/slid_img_3_t@2x.jpg);
+			background-image: $bg-gradient, url(../images/background/hero/tablet/slid_img_3_t@2x.webp);
+		}
+		@include retina_3x {
+			background-image: $bg-gradient, url(../images/background/hero/tablet/slid_img_3_t@3x.jpg);
+			background-image: $bg-gradient, url(../images/background/hero/tablet/slid_img_3_t@3x.webp);
+		}
+	}
 
+	@include desktop {
+		padding: 272px 100px 208px;
+		background-image: $bg-gradient, url(../images/background/hero/desktop/slid_img_3_d.jpg);
+		background-image: $bg-gradient, url(../images/background/hero/desktop/slid_img_3_d.webp);
+		@include retina_2x {
+			background-image: $bg-gradient, url(../images/background/hero/desktop/slid_img_3_d@2x.jpg);
+			background-image: $bg-gradient, url(../images/background/hero/desktop/slid_img_3_d@2x.webp);
+		}
+		@include retina_3x {
+			background-image: $bg-gradient, url(../images/background/hero/desktop/slid_img_3_d@3x.jpg);
+			background-image: $bg-gradient, url(../images/background/hero/desktop/slid_img_3_d@3x.webp);
+		}
+	}
+}
 .hero__pre-title {
 	margin-bottom: 20px;
 	color: $quaternary-text-color;
 }
 
 .hero__title {
-	margin-bottom: 20px;
 	font-family: "Raleway", sans-serif;
-	@include font(72px, 700, $ls: 0.05em);
+	@include font(40px, 700, $ls: 0.05em);
 	color: $tertiary-text-color;
+	margin-bottom: 20px;
+
+	@include mobile {
+		font-size: 48px;
+	}
+
+	@include desktop {
+		font-size: 72px;
+	}
 }
 
 .hero__description {
-	max-width: 360px;
+	max-width: 321px;
+	@include tablet {
+		max-width: 360px;
+	}
 }

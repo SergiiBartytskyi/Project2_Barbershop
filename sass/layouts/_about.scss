@@ -1,15 +1,32 @@
 .about .container {
-	display: flex;
-	column-gap: 30px;
+	@include tablet {
+		display: flex;
+		column-gap: 30px;
+	}
 }
 
 .about__list {
-	display: flex;
-	column-gap: 30px;
+	display: none;
+
+	@include tablet {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	@include desktop {
+		flex-direction: row;
+	}
 }
 
 .about__content {
-	max-width: 470px;
+	max-width: 418px;
+	@include tablet {
+		max-width: 330px;
+	}
+	@include desktop {
+		max-width: 470px;
+	}
 }
 
 .about__pre-title {
@@ -17,7 +34,19 @@
 }
 
 .about__title {
+	// margin-left: auto;
+	// margin-right: auto;
+	font-size: 28px;
 	margin-bottom: 20px;
+	width: 306px;
+	@include tablet {
+		width: 100%;
+		// margin-left: 0;
+		// margin-right: 0;
+	}
+	@include desktop {
+		font-size: 42px;
+	}
 }
 
 .about__description {
@@ -29,4 +58,20 @@
 	margin-bottom: 40px;
 	@include font(14px, null, 1.86);
 	color: $primary-text-color;
+	@include tablet {
+		margin-bottom: 77px;
+	}
+	@include desktop {
+		margin-bottom: 42px;
+	}
+}
+
+.about__button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include mobile {
+		margin: 0;
+	}
 }

@@ -1,8 +1,8 @@
 @import "./utils/vars";
 @import "./base/reset";
+@import "./utils/mixin";
 @import "./base/common";
 @import "./utils/visually-hidden";
-@import "./utils/mixin";
 
 @import "./components/container";
 @import "./components/pre-title";
@@ -12,6 +12,7 @@
 @import "./components/btn";
 @import "./components/modal";
 @import "./components/socials-list";
+@import "./components/menu";
 
 @import "./layouts/header";
 @import "./layouts/hero";

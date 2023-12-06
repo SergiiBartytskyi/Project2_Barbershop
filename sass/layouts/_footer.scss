@@ -1,6 +1,10 @@
 .footer {
-	padding-top: 56px;
-	padding-bottom: 56px;
+	padding-top: 44px;
+	padding-bottom: 44px;
+	@include tablet {
+		padding-top: 56px;
+		padding-bottom: 56px;
+	}
 
 	& .container {
 		display: flex;
@@ -8,12 +12,27 @@
 	}
 
 	&__copy {
+		padding-top: 35px;
 		@include font(11px, 600);
 		color: $description-color;
+
+		@include tablet {
+			padding-top: 0;
+		}
 	}
 
 	&__list {
 		margin-left: auto;
+		padding-bottom: 35px;
+		gap: 20px;
+
+		@include mobile {
+			gap: 40px;
+		}
+
+		@include tablet {
+			padding-bottom: 0;
+		}
 	}
 
 	&__item {

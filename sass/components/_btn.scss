@@ -8,7 +8,6 @@
 	text-transform: uppercase;
 	border-radius: 25px;
 	border: 1px solid $accent-color;
-	color: $tertiary-text-color;
 	background-color: transparent;
 	cursor: pointer;
 	transition: color 300ms linear, background-color 300ms linear;
@@ -19,13 +18,56 @@
 		background-color: $accent-color;
 	}
 
+	&__primary {
+		color: $tertiary-text-color;
+	}
 	&__secondary {
 		color: $secondary-text-color;
+
+		&--big {
+			min-width: 160px;
+			width: 160px;
+
+			@include mobile {
+				width: 194px;
+			}
+		}
 	}
 
 	&__secondary:hover,
 	&__secondary:focus {
 		color: $tertiary-text-color;
-		background-color: $accent-color;
 	}
+}
+
+.menu__btn {
+	position: absolute;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	top: 48px;
+	right: 30px;
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	margin-left: auto;
+	background-color: transparent;
+	border: none;
+	transition: fill 300ms linear;
+
+	&:hover,
+	&:focus {
+		fill: $accent-color;
+	}
+
+	@include tablet {
+		display: none;
+	}
+}
+.menu__btn--open {
+	fill: $tertiary-text-color;
+}
+.menu__btn--close {
+	fill: $secondary-text-color;
+	margin-bottom: 30px;
 }

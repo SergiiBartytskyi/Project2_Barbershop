@@ -1,25 +1,71 @@
 .header {
 	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 	width: 100%;
-	padding: 32px 0;
+	padding: 40px 0;
+
+	@include mobile {
+		width: 480px;
+	}
+
+	@include tablet {
+		width: 768px;
+		padding: 32px 0;
+	}
+
+	@include desktop {
+		width: 1200px;
+	}
 
 	& .container {
 		display: flex;
 		align-items: center;
 	}
 
-	&__nav {
-		margin-left: 130px;
-	}
-	&__list {
-		display: flex;
+	&__icon .logo__icon--light {
+		display: inline-block;
+
+		@include tablet {
+			display: none;
+		}
 	}
 
-	&__item + &__item {
-		margin-left: 30px;
+	&__icon .logo__icon--dark {
+		display: none;
+
+		@include tablet {
+			display: inline-block;
+		}
 	}
-	&__wrap {
-		margin-left: auto;
+
+	&__nav {
+		display: none;
+
+		@include tablet {
+			display: flex;
+			margin-left: 58px;
+		}
+
+		@include desktop {
+			margin-left: 130px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		gap: 20px;
+
+		@include desktop {
+			gap: 30px;
+		}
+	}
+
+	&__link {
+		@include tablet {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
 	}
 
 	&__link,
@@ -34,7 +80,32 @@
 		}
 	}
 
-	&__btn {
-		margin-left: 43px;
+	&__tel {
+		padding-top: 10px;
+		padding-bottom: 10px;
+
+		@include desktop {
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+	}
+
+	&__wrap {
+		display: none;
+		@include tablet {
+			display: flex;
+			flex-direction: column-reverse;
+			align-items: center;
+			margin-left: auto;
+			gap: 20px;
+
+			@include desktop {
+				gap: 43px;
+			}
+		}
+
+		@include desktop {
+			flex-direction: row;
+		}
 	}
 }

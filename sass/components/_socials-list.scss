@@ -4,7 +4,7 @@
 	gap: 40px;
 
 	&__link {
-		@include font(11px, 600);
+		@include font(11px, 600, $ls: 0.2em);
 		color: $secondary-text-color;
 		transition: color 300ms linear;
 
